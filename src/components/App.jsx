@@ -1,11 +1,11 @@
-import {Routes, Route} from 'react-router-dom'
-import {useState} from 'react'
-import './App.css'
-import Home from './Home/Home'
-import Notfound from './Notfound/Notfound'
-import Movie from './Movie/Movie'
+import {Routes, Route} from 'react-router-dom';
+import {useState} from 'react';
+import './App.css';
+import Home from './Home/Home';
+import Notfound from './Notfound/Notfound';
+import Movie from './Movie/Movie';
 
-import AppBar from './appBar/appBar'
+import AppBar from './appBar/appBar';
 
 
 function App() {
