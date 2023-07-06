@@ -22,12 +22,12 @@ function App() {
          </>}>
       </Route>
         <Route
-         path='/goit-react-hw-05-movies/home'
+         path='/home'
          element={ producto ? <Home prod={producto}></Home>:<h1>No existe el producto</h1>}>
         </Route>
 
         <Route
-         path='/goit-react-hw-05-movies/movie'
+         path='/movie'
          element={<Movie></Movie>}>
         </Route>
 
