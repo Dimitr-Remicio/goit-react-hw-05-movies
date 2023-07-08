@@ -57,6 +57,15 @@ export function fetchMovieReviews(movie_id, page = "1") {
     
     return fetchWithErrorHandling(`${BASE_URL}${PATH_PARAMS}${movie_id}/reviews${API_KEY}${searchParams}&page=${page}`)
 }
+export function fetchMovieTrailer(movie_id, page = "1") {
+    const PATH_PARAMS = '/movie/';
+    const searchParams = '&language=en-US';
+
+    // return fetch(`${BASE_URL}${PATH_PARAMS}${movie_id}/reviews${API_KEY}${searchParams}&page=${page}`)
+    //     .then(response => response.json())
+    
+    return fetchWithErrorHandling(`${BASE_URL}${PATH_PARAMS}${movie_id}/videos${API_KEY}${searchParams}`)
+}
 // adult
 // boolean
 // backdrop_path

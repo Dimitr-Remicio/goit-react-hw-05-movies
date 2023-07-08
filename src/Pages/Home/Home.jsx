@@ -1,4 +1,4 @@
-import TrendingMovies from './TrendingMovies';
+import TrendingMovies from '../../components/TrendingMovies/TrendingMovies';
 import s from './Home.module.css';
 
 export default function Home() {

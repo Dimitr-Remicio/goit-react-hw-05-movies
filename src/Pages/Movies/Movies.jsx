@@ -3,8 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
 
-import SearchInput from "./searchInput/SearchInput";
-import SearchedMovies from "./SearchedMovies/SearchedMovies";
+import SearchInput from "../../components/searchInput/SearchInput";
+import SearchedMovies from "../../components/SearchedMovies/SearchedMovies";
 
 // import css from './Movies.module.css';
 

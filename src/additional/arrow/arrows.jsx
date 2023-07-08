@@ -5,7 +5,7 @@ import style from '../toogle.module.css';
 import '../arrow/arrows.jsx';
 
 function Dark() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const toggleTheme = () => {
     if (theme === 'light') {
       setTheme('dark');

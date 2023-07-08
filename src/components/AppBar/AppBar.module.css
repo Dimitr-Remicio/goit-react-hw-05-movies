@@ -43,7 +43,7 @@ header{
     justify-content: space-between;
     
     color: var(--text-color);
-    background-color: var(--header-color);
+    /* background-color: var(--header-color); */
     
 }
 
@@ -61,11 +61,44 @@ header{
     gap: 4em;
     
 }
+.rect{
+    position: absolute;
+    left: 0;
+    z-index: 200;
+    transform: translate(0%, -50%);
+}
+.logopage{
+    width: auto;
+}
+.icondiv{
+    transform: translate(10%,0%);
+    
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    z-index: 800;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
 
 .icorect{
+    display: block;
     fill: var(--film-rect);
 }
 .icotext{
+    display: block;
+
+    fill: var(--ico-color);
+    position: absolute;
+    z-index: 500;
+}
+.icone{
+    position: absolute;
+    z-index: 500;
     fill: var(--ico-color);
 }
 
@@ -93,27 +126,50 @@ a:hover{
 }
 
 
-.containerheader {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    background-color: var(--header-color);
-
-}
-
-@media screen and (min-width: 768px) {
-    .containerheader {
-        width: 768px;
+@media screen and (max-width: 500px) {
+    .icorect{
+        /* display: none; */
+        fill: var(--film-rect);
+    }
+    .firstlayout{
+        display: none;
+        /* position: absolute; */
+        /* transform: translate(-100%); */
+    }
+    .icotext{
+        display:none;
+        fill: var(--text-color);
+    }   
+    .icone{
+        fill: var(--text-color);
+    }
+    .rect{
+        display: none;
+    }
+    .navpage{
+        gap: 20px;
     }
 }
 
-@media screen and (min-width: 1200px) {
-    .containerheader {
-        width: 1200px;
+@media screen and (max-width: 768px) {
+    .icorect{
+        /* display: none; */
+        fill: var(--film-rect);
+    }
+    .firstlayout{
+        display: none;
+        /* position: absolute; */
+        /* transform: translate(-100%); */
+    }
+    .icotext{
+        display:none;
+        fill: var(--text-color);
+    }   
+    .icone{
+        fill: var(--text-color);
+    }
+    .rect{
+        display: none;
     }
 }

@@ -1,12 +1,18 @@
 import {Routes, Route} from 'react-router-dom';
 // import {useState} from 'react';
 import './App.css';
-import Home from './Home/Home';
-import Notfound from './Notfound/Notfound';
-import Movies from './Movies/Movies';
-import Container from './Container/Container';
 import AppBar from './AppBar/AppBar';
 
+
+import Home from '../Pages/Home/Home';
+import Movies from '../Pages/Movies/Movies';
+import MovieDetails from '../Pages/MovieDetails/MovieDetails';
+import Cast from './Cast/Cast';
+import Trailer from './Trailer/Trailer';
+import Reviews from './Reviews/Reviews';
+
+import Notfound from './Notfound/Notfound';
+import Container from './Container/Container';
 
 function App() {
   
@@ -34,15 +40,10 @@ function App() {
             }>
         </Route>
         
-        <Route
-         path='/movies/:movieId'
-         element={
-          <Container>
-
-            
-
-            </Container>
-            }>
+        <Route path='/movies/:movieId' element={<Container><MovieDetails></MovieDetails></Container>}>        
+            <Route path='/movies/:movieId/cast' element={<Container><Cast></Cast></Container>}></Route>
+            <Route path='/movies/:movieId/reviews' element={<Container><Reviews></Reviews></Container>}></Route>
+            <Route path='/movies/:movieId/videos' element={<Container><Trailer></Trailer></Container>}></Route>
         </Route>
 
 

@@ -6,8 +6,10 @@
 
 
 
-  --button-color: #cc6363;
-  --button-hover: #860000;
+  --button-color: #fdc6c6;
+  --button-text: #4d0000;
+  --button-text-hover: #fdfdfd;
+  --button-hover: #F34646;
   --tag-color: #ffc3a0;
   
   
@@ -26,18 +28,20 @@
   --arrow: #2a355a;
   
   
-  --film-rect:#e03f39;
+  --film-rect:#ff6969;
   --ico-color:#ffffff;
 }
 .dark {
   --background-color: url(../images/backblue.jpg);
-  --header-color: #212f4900;
+  --header-color: #212f49fd;
   --blur: #1a2538;
   --card-color: #1d2838;
 
 
-  --button-color: #4c4c4d;
-  --button-hover: #474a4e98;
+  --button-color: #61dcf1;
+  --button-text: #030303;
+  --button-text-hover: #f7f0f0;
+  --button-hover: #526fc0;
   --tag-color: #fce300d8;
   
   --text-button: #97c7ff;
