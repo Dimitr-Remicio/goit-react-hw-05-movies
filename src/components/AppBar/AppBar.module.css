@@ -1,5 +1,9 @@
 @import '../../additional/colors.css';
 
+header{
+    z-index: 9000;
+    
+}
 
 
 .header{
@@ -7,6 +11,7 @@
     height: 80px;
     
     position: absolute;
+    
     display: flex;
     
     align-items: center;
@@ -14,14 +19,16 @@
     
     top: 0;
     
-    color: var(--text-color);
-    background-color: var(--header-color);
     
     list-style: none;
     text-decoration: none;
-
+    
     margin: 0 auto;
-
+    color: var(--text-color);
+    background-color: var(--header-color);
+    
+    
+    box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.432);
 }
 .header_content{
     display: flex;
@@ -29,26 +36,51 @@
     
     width: 100%;
     height: 100%;
-
+    
     margin: 0 10%;
-
+    
     align-items: center;
     justify-content: space-between;
-
+    
+    color: var(--text-color);
+    background-color: var(--header-color);
+    
 }
 
 .navpage{
-
+    
     display: flex;
+    height: 100%;
+    align-items: center;
 
     gap: 10px;
-
+    
     font-size: 17px;
     font-weight: 400;
-
+    
     gap: 4em;
     
 }
+
+.icorect{
+    fill: var(--film-rect);
+}
+.icotext{
+    fill: var(--ico-color);
+}
+
+.blur{
+    filter: blur(2rem);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 90px;
+
+    background-color: var(--blur);
+}
+
+
+
 a{
     color: var(--text-color-50);
     transition: all 400ms;
@@ -57,5 +89,31 @@ a:hover{
     color: var(--text-color);
     transition: all 400ms;
     font-weight: 500;
+    
+}
 
+
+.containerheader {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--header-color);
+
+}
+
+@media screen and (min-width: 768px) {
+    .containerheader {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .containerheader {
+        width: 1200px;
+    }
 }

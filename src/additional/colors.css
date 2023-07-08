@@ -1,53 +1,61 @@
 .light {
   --background-color: #ffffff;
   --header-color: #ffffff;
-  --stats-color: #e7ecf2;
+  --blur: #ffffff;
+  --card-color: #ffffff;
+
+
+
   --button-color: #cc6363;
   --button-hover: #860000;
-  --item: #ffd4d4ad;
-
+  --tag-color: #ffc3a0;
+  
+  
   --text-color: #000000;
-  --text-color-50: #3f3f3f;
+  --descript-color: #02020277;
   --text-button: #ffffff;
-
+  
   --title: #333333;
-
+  
   --white-color: #ffffff;
-
-  --shadow-color: #858585;
+  
+  --shadow-color: #ff3737d0;
+  --hover-color: #ff7272;
+  
   --shadow-card: #4d4d4d;
-
   --arrow: #2a355a;
-  --arrow-hover: #00000091;
-
-  --state-1: #7e5c00;
-  --state-1-hover: #7e5c00;
-  --state-2: #c21111;
-  --state-3: #c21111;
+  
+  
+  --film-rect:#e03f39;
+  --ico-color:#ffffff;
 }
 .dark {
-  --background-color: #333333;
-  --card-color: #363636;
-  --stats-color: #4d4d4d;
+  --background-color: url(../images/backblue.jpg);
+  --header-color: #212f4900;
+  --blur: #1a2538;
+  --card-color: #1d2838;
+
+
   --button-color: #4c4c4d;
   --button-hover: #474a4e98;
-  --item: #3f3f3f;
-
+  --tag-color: #fce300d8;
+  
   --text-button: #97c7ff;
-  --text-color: #f1f5ffec;
-  --text-color-50: #9d9ea1;
-
+  --text-color: #ffffff;
+  --descript-color: #6baebe;
+  --text-color-50: #c0c9e0;
+  
   --white-color: #ffffff;
+  
+  --shadow-color: #90f8ff88;
 
-  --shadow-color: #000000;
-  --shadow-card: #131313;
+
   --title: #7099a5;
 
-  --arrow: #97c7ff;
+  --rating: #0f0f0f;
   --arrow-hover: #ffd1d1be;
 
-  --state-1: #f0c85ac7;
-  --state-1-hover: #f0c85ac7;
-  --state-2: #b7b9bdc9;
-  --state-3: #d2deffd7;
+  --film-rect:#eb0b0300;
+  --ico-color:#63ffff;
+
 }

@@ -1,40 +1,60 @@
-import {Routes, Route} from 'react-router-dom'
-import {useState} from 'react'
-import './App.css'
-import Home from './Home/Home'
-import Notfound from './Notfound/Notfound'
-import Movie from './Movie/Movie'
-
-import AppBar from './AppBar/AppBar'
+import {Routes, Route} from 'react-router-dom';
+// import {useState} from 'react';
+import './App.css';
+import Home from './Home/Home';
+import Notfound from './Notfound/Notfound';
+import Movies from './Movies/Movies';
+import Container from './Container/Container';
+import AppBar from './AppBar/AppBar';
 
 
 function App() {
-  const [producto] = useState("🍕") 
+  
 
   return (
     <> 
       <AppBar></AppBar>
       <Routes>
-      <Route
-         path='/'
-         element={<>
-            <h1>Index</h1>
-         </>}>
-      </Route>
         <Route
-         path='/home'
-         element={ producto ? <Home prod={producto}></Home>:<h1>No existe el producto</h1>}>
+         path='/'
+         element={ <Container>
+           <Home></Home>
+          </Container>
+           }>
         </Route>
 
         <Route
-         path='/movie'
-         element={<Movie></Movie>}>
+         path='/movies'
+         element={
+          <Container>
+
+            <Movies></Movies>
+
+            </Container>
+            }>
+        </Route>
+        
+        <Route
+         path='/movies/:movieId'
+         element={
+          <Container>
+
+            
+
+            </Container>
+            }>
         </Route>
 
 
         <Route
          path='*'
-         element={<><h1>404:NOT FOUND</h1><Notfound></Notfound></>}>
+         element={
+          <Container>
+            <div className='pageerror'>
+              <Notfound></Notfound>
+            </div>
+          </Container>
+          }>
         </Route>
   
       </Routes> 

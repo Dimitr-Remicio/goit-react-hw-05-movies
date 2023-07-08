@@ -9,6 +9,7 @@ export default function Headers() {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
         />
+
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Muli&display=swap"
@@ -19,7 +20,9 @@ export default function Headers() {
           href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <title>5-React</title>
+
+        
+        <title>Filmoteka</title>
       </Helmet>
     </div>
   );
