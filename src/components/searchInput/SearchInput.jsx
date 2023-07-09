@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
+import s from './SearchInput.module.css';
 
 
 function SearchInput(props) {
@@ -29,13 +30,9 @@ function SearchInput(props) {
   }
   
     return (
-        <form  onSubmit={handleSubmit}>
-          <button type="submit" >
-            
-            <span >Search</span>
-          </button>
-  
+        <form className={s.formSearch} onSubmit={handleSubmit}>
           <input
+            className={s.inputSr}
             type="text"
             autoComplete="off"
             autoFocus
@@ -43,6 +40,10 @@ function SearchInput(props) {
             value={searchQuery}
             onChange={handleSearchQuery}
           />
+          <button type="submit" >
+            <span >Search</span>
+          </button>
+  
         </form>
       );
   };
