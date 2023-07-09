@@ -21,9 +21,9 @@ export default function Trailer() {
   return (
     video.length > 0 ? (<div>
         {video.slice(0, 5).map(({ key, id, name }) => {
-            return <div key={id}>
+            return <div className={s.videocont} key={id}>
               <h1>{name}</h1>
-              <ReactPlayer url={`${BASE_VIDEO}${key}`}width="100%" height="600px" controls />
+              <ReactPlayer url={`${BASE_VIDEO}${key}`} width="" height="600px"  className={s.video} controls />
           </div>
         })}
     </div>)

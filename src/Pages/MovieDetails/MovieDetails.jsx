@@ -92,26 +92,26 @@ const MovieDetails = () => {
     <>
         <div className={s.details}>
             <div className={s.description}>
-                <h1>Others</h1>
+                <h1 className={s.titleDecript}>Others</h1>
                 <ul className={s.info}>
                     {movie.vote_average !== 0
-                        ? <li className={s.info__item}>User Score: <span className={s.info__value}><span className={s.star}><i className="fa fa-star-o"></i></span>&#160;{movie.vote_average}</span></li>
-                        : <li className={s.info__item}>User Score: <span className={s.info__value}><span className={s.star}><i className="fa fa-star-o"></i></span>&#160;--</span></li>}
+                        ? <li className={s.info__item}><div className={s.tagother}>User Score:</div><div className={s.tagCont}><span className={s.info__value}><span className={s.star}><i className='fa-sharp fa-regular fa-star'></i></span>&#160;{movie.vote_average}</span></div></li>
+                        : <li className={s.info__item}><div className={s.tagother}>User Score:</div> <div className={s.tagCont}><span className={s.info__value}><span className={s.star}><i className="fa fa-star-o"></i></span>&#160;--</span></div></li>}
                     {movie.budget !== 0
-                        ? <li className={s.info__item}>Budget: <span className={s.info__value}>${movie.budget.toLocaleString()}</span></li>
-                        : ''}
+                        ? <li className={s.info__item}><div className={s.tagother}>Budget: </div><div className={s.tagCont}><span className={s.info__value}>${movie.budget.toLocaleString()}</span></div></li>
+                        : <li className={s.info__item}><div className={s.tagother}>Budget: </div><div className={s.tagCont}><span className={s.info__value}>none</span></div></li>}
                     {movie.revenue !== 0
-                        ? <li className={s.info__item}>Revenue: <span className={s.info__value}>${movie.revenue.toLocaleString()}</span></li>
-                        : ''}
+                        ? <li className={s.info__item}><div className={s.tagother}>Revenue:</div> <div className={s.tagCont}><span className={s.info__value}>${movie.revenue.toLocaleString()}</span></div></li>
+                        : <li className={s.info__item}><div className={s.tagother}>Revenue:</div> <div className={s.tagCont}><span className={s.info__value}>none</span></div></li>}
                     {movie.runtime !== 0
-                        ? <li className={s.info__item}>Runtime: <span className={s.info__value}>{timeConvert(movie.runtime)}</span></li>
-                        : ''}
-                    <li className={s.info__item}>Genres: <ul className={s.genres}>
+                        ? <li className={s.info__item}><div className={s.tagother}>Runtime:</div><div className={s.tagCont}> <span className={s.info__value}>{timeConvert(movie.runtime)}</span></div></li>
+                        : <li className={s.info__item}><div className={s.tagother}>Runtime:</div><div className={s.tagCont}> <span className={s.info__value}>none</span></div></li>}
+                    <li className={s.info__item}><div className={s.tagother}>Genres: </div> <ul className={s.genres}>
                         {movie.genres.length>0 
                             ? movie.genres.map(({ id, name }, index) => (
-                                <li className={s.genres__item} key={id}>
-                                    { (index  ? ', ' : '') + name }
-                                </li>
+                                <div className={s.tagCont} key={id}>
+                                    { (index = '') + name +',' }
+                                </div>
                                 ))
                             : <p className={s.genres__item}>Other</p>}
                         </ul>
@@ -133,15 +133,19 @@ const MovieDetails = () => {
                 <h2 className={s.title}>{movie.original_title}</h2>
                 </div>
                 <div className={s.title_wrapper}>
-                    <h1 className={s.title}>Sinopsis</h1>
-                    <p className={s.overview}>{movie.overview}</p>
-                    <br />
-                    <h3>Movie Tagline</h3>
-                    {movie.tagline !== ""
-                        // Checking for dot at the end of a string with tagline
-                        ? <p className={s.tagline}>"{movie.tagline}"</p>
-                        : ''
-                    }
+                    <div>
+                        <h1 className={s.titleDecript}>Sinopsis</h1>
+                        <p className={s.overview}>{movie.overview}</p>
+                    </div>
+                        <br />
+                    <div>
+                        <h3>Movie Tagline</h3>
+                        {movie.tagline !== ""
+                            // Checking for dot at the end of a string with tagline
+                            ? <p className={s.tagline}>"{movie.tagline}"</p>
+                            : ''
+                        }
+                    </div>
                 </div>
             </div>
         </div>
