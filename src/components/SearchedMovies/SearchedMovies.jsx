@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MoviesList from '../MoviesList/MoviesList';
 import MoviesListItem from '../MoviesListItem';
 import normalizedData from '../../Service/normalized-data';
-import { fetchMovies } from '../../service/api';
+import { fetchMovies } from '../../Service/api';
 import s from './SearchedMovies.module.css';
 
 export default function SearchedMovies({searchQuery}) {
