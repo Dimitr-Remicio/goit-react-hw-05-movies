@@ -1,5 +1,77 @@
+@import '../../additional/colors.css';
+
 .additional{
     display: flex;
     flex-direction: row;
     gap: 1em;
+    margin-top: 50px;
+    width: 100%;
+}
+.additional button{
+    background-color: #02020200;
+    border: 1px solid var(--button-border);
+    color: var(--button-text-c);
+}
+.additional button:focus, button:hover{
+    background-color: var(--button-color);
+    border: 1px solid var(--button-border);
+    color: var(--button-text);
+}
+.go_back{
+    position: absolute;
+    left: 1em;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.image_wrapper{
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+
+    padding: 30px 30px 10px 30px;
+
+    border-radius: 40px;
+    background-color: var(--card2-color);
+    
+}
+.title_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    
+}
+.image{
+    width: 350px;
+    border-radius: 30px;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.imagecont{
+
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 250px;
+    height: 500px;
+    padding: 0;
+}
+.info__item{
+    display: flex;
+    justify-content: space-between;
+
+}
+li{
+    list-style: none;
+    text-decoration: none;
 }

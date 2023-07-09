@@ -3,12 +3,14 @@
   --header-color: #ffffff;
   --blur: #ffffff;
   --card-color: #ffffff;
+  --card2-color: #f0efef;
+  --border-color: #010e0f;
 
 
 
 
-  --button-color: #fdc6c6;
-  --button-text: #4d0000;
+  --button-color: #ff4c4c;
+  --button-text: #ffffff;
   --button-text-hover: #fdfdfd;
   --button-hover: #F34646;
   --tag-color: #ffc3a0;
@@ -37,11 +39,16 @@
   --header-color: #212f49fd;
   --blur: #1a2538;
   --card-color: #1d2838;
+  --card2-color: #273141;
+
+  --border-color: #0d5055;
 
 
-  --button-color: #61dcf1;
-  --button-text: #030303;
-  --button-text-hover: #f7f0f0;
+  --button-color: #61dbf1;
+  --button-border: #61dbf1;
+  --button-text: #080808;
+  --button-text-c: #ffffff;
+  --button-text-hover: #414040;
   --button-hover: #526fc0;
   --tag-color: #fce300d8;
   

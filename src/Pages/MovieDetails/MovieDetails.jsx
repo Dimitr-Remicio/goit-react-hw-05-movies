@@ -86,28 +86,13 @@ const MovieDetails = () => {
     }
     return <>
         
-    {movie &&
-        <div className={s.details}>
                 <button onClick={goBackHandle} className={s.go_back}>
                 </button>
-            <div className={s.image_wrapper}>
-                {movie.poster_path
-                
-                ? <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} className={s.image}/>
-                : <img src='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg' alt={movie.original_title} className={s.image} />
-                }
-                
-            </div>
-
+    {movie &&
+    <>
+        <div className={s.details}>
             <div className={s.description}>
-                <div className={s.title_wrapper}>
-                    <h2 className={s.title}>{movie.original_title}</h2>
-                    {movie.tagline !== ""
-                        // Checking for dot at the end of a string with tagline
-                        ? <p className={s.tagline}>"{movie.tagline}"</p>
-                        : ''
-                    }
-                </div>
+                <h1>Others</h1>
                 <ul className={s.info}>
                     {movie.vote_average !== 0
                         ? <li className={s.info__item}>User Score: <span className={s.info__value}><span className={s.star}><i className="fa fa-star-o"></i></span>&#160;{movie.vote_average}</span></li>
@@ -133,15 +118,40 @@ const MovieDetails = () => {
                     </li>
                 </ul>
                 
-                <p className={s.overview}>{movie.overview}</p>
 
+            </div>
+
+            <div className={s.image_wrapper}>
+                <div className={s.imagecont}>
+
+                {movie.poster_path
+                
+                ? <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} className={s.image}/>
+                : <img src='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg' alt={movie.original_title} className={s.image} />
+                }
+                
+                <h2 className={s.title}>{movie.original_title}</h2>
+                </div>
+                <div className={s.title_wrapper}>
+                    <h1 className={s.title}>Sinopsis</h1>
+                    <p className={s.overview}>{movie.overview}</p>
+                    <br />
+                    <h3>Movie Tagline</h3>
+                    {movie.tagline !== ""
+                        // Checking for dot at the end of a string with tagline
+                        ? <p className={s.tagline}>"{movie.tagline}"</p>
+                        : ''
+                    }
+                </div>
+            </div>
+        </div>
                 <div className={s.additional}>
                     <Link to={`/movies/${movieId}/cast`} className={s.additional__button}><button>Cast</button></Link>
                     <Link to={`/movies/${movieId}/reviews`} className={s.additional__button}><button>Reviews</button></Link>
                     <Link to={`/movies/${movieId}/videos`} className={s.additional__button}><button>Trailer</button></Link>
                 </div>
-            </div>
-        </div>}
+        </>
+    }
     
     <Outlet/>
 </>

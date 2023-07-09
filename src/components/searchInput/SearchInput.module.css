@@ -1,10 +1,18 @@
+@import '../../additional/colors.css';
+
 .formSearch{
     display: flex;
     gap: 20px;
 }
+input{
+
+    all: unset;
+}
 .inputSr{
     border-radius: 10px;
-    border: 0;
-
-    
+    border: 2px solid var(--border-color);
+    background-color: #ffffff00;
+    width: auto;
+    height: 40px;
+    padding-left: 10px;
 }
