@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import MoviesList from '../MoviesList/MoviesList';
 import MoviesListItem from '../MoviesListItem';
 import normalizedData from '../../Service/normalized-data';
-import { fetchTrendingMovies } from '../../service/api';
+import { fetchTrendingMovies } from '../../Service/api';
 import s from './TrendingMovies.module.css';
 
 export default function TrendingMovies() {
