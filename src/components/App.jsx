@@ -1,15 +1,15 @@
+import { lazy, Suspense, useState } from "react";
 import {Routes, Route} from 'react-router-dom';
-// import {useState} from 'react';
+import BarLoader from 'react-spinners/BarLoader';
 import './App.css';
 import AppBar from './AppBar/AppBar';
 
-
-import Home from '../Pages/Home/Home';
-import Movies from '../Pages/Movies/Movies';
-import MovieDetails from '../Pages/MovieDetails/MovieDetails';
-import Cast from './Cast/Cast';
-import Trailer from './Trailer/Trailer';
-import Reviews from './Reviews/Reviews';
+const HomePage = lazy(() => import('../Pages/Home/Home' /* webpackChunkName: "home-page" */))
+const MoviesPage = lazy(() => import('../Pages/Movies/Movies' /* webpackChunkName: "movies-page" */))
+const MovieDetailsPage = lazy(() => import('../Pages/MovieDetails/MovieDetails' /* webpackChunkName: "movie-details-page" */))
+const Cast = lazy(() => import('../components/Cast/Cast' /* webpackChunkName: "cast" */))
+const Reviews = lazy(() => import('../components/Reviews/Reviews' /* webpackChunkName: "reviews" */))
+const Trailer = lazy(() => import('../components/Trailer/Trailer' /* webpackChunkName: "trailer" */))
 
 import Notfound from './Notfound/Notfound';
 import Container from './Container/Container';
@@ -17,33 +17,18 @@ import Container from './Container/Container';
 function App() {
   
 
+  let [color, setColor] = useState("#EF6401");
+
   return (
     <> 
       <AppBar></AppBar>
       <Routes>
-        <Route
-         index
-         element={ <Container>
-           <Home></Home>
-          </Container>
-           }>
-        </Route>
-
-        <Route
-         path='/movies'
-         element={
-          <Container>
-
-            <Movies></Movies>
-
-            </Container>
-            }>
-        </Route>
-        
-        <Route path='/movies/:movieId' element={<Container><MovieDetails></MovieDetails></Container>}>        
-            <Route path='/movies/:movieId/cast' element={<Container><Cast></Cast></Container>}></Route>
-            <Route path='/movies/:movieId/reviews' element={<Container><Reviews></Reviews></Container>}></Route>
-            <Route path='/movies/:movieId/videos' element={<Container><Trailer></Trailer></Container>}></Route>
+        <Route index element={ <Container><Suspense fallback={<BarLoader color={color}/>}><HomePage></HomePage></Suspense></Container>}></Route>
+        <Route path='/movies' element={ <Container><Suspense fallback={<BarLoader color={color}/>}><MoviesPage></MoviesPage></Suspense></Container>}></Route>        
+        <Route path='/movies/:movieId' element={<Container><Suspense fallback={<BarLoader color={color}/>}><MovieDetailsPage></MovieDetailsPage></Suspense></Container>}>        
+            <Route path='/movies/:movieId/cast' element={<Container><Suspense fallback={<BarLoader color={color}/>}><Cast></Cast></Suspense></Container>}></Route>
+            <Route path='/movies/:movieId/reviews' element={<Container><Suspense fallback={<BarLoader color={color}/>}><Reviews></Reviews></Suspense></Container>}></Route>
+            <Route path='/movies/:movieId/videos' element={<Container><Suspense fallback={<BarLoader color={color}/>}><Trailer></Trailer></Suspense></Container>}></Route>
         </Route>
 
 
