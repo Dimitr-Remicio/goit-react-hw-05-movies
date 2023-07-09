@@ -7,9 +7,9 @@ import AppBar from './AppBar/AppBar';
 const HomePage = lazy(() => import('../Pages/Home/Home' /* webpackChunkName: "home-page" */))
 const MoviesPage = lazy(() => import('../Pages/Movies/Movies' /* webpackChunkName: "movies-page" */))
 const MovieDetailsPage = lazy(() => import('../Pages/MovieDetails/MovieDetails' /* webpackChunkName: "movie-details-page" */))
-const Cast = lazy(() => import('../components/Cast/Cast' /* webpackChunkName: "cast" */))
-const Reviews = lazy(() => import('../components/Reviews/Reviews' /* webpackChunkName: "reviews" */))
-const Trailer = lazy(() => import('../components/Trailer/Trailer' /* webpackChunkName: "trailer" */))
+const Cast = lazy(() => import('./Cast/Cast' /* webpackChunkName: "cast" */))
+const Reviews = lazy(() => import('./Reviews/Reviews' /* webpackChunkName: "reviews" */))
+const Trailer = lazy(() => import('./Trailer/Trailer' /* webpackChunkName: "trailer" */))
 
 import Notfound from './Notfound/Notfound';
 import Container from './Container/Container';
