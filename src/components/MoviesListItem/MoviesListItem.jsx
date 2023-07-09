@@ -13,7 +13,7 @@ export default function MoviesListItem({ data }) {
             <div className={s.image_wrapper}>
               {poster_path
                     ? <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} className={s.image}/>
-                    : <img src='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg' alt={title} className={s.image} />
+                    : <img src='https://i.postimg.cc/HkkLYx1T/Recurso-4.png' alt={title} className={s.image} />
                 }
             </div>
             <div className={s.description}>

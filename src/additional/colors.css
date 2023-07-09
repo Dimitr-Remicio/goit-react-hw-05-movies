@@ -11,7 +11,7 @@
 
   --button-color2: #FFD0D0;
   --button-color: #ff4c4c;
-  --button-border: #ff4c4c;
+  --button-border: #ffb3b3;
   --button-text: #ffffff;
   --button-text-hover: #fdfdfd;
   --button-hover: #F34646;
@@ -26,6 +26,8 @@
   
   --white-color: #ffffff;
   
+  --accent-color:#ff4c4c;
+
   --shadow-color: #ff3737d0;
   --hover-color: #ff7272;
   

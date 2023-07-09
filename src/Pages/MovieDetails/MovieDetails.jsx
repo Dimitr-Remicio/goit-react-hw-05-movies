@@ -85,9 +85,12 @@ const MovieDetails = () => {
         return hoursText + minutesText;
     }
     return <>
-        
+            <div className={s.buttonback}>
+
                 <button onClick={goBackHandle} className={s.go_back}>
+                    Go Back
                 </button>
+            </div>
     {movie &&
     <>
         <div className={s.details}>

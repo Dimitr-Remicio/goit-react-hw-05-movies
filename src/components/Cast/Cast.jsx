@@ -22,7 +22,7 @@ export default function Cast() {
                         <a className={s.link } href={`https://www.google.com/search?q=${original_name.split(' ').join('+')}`} target='_blank' rel="noreferrer">
                             <div className={s.image_wrapper}>{profile_path
                                 ? <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} alt={original_name} className={s.image} />
-                                : <img src='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg' alt={original_name} className={s.image} />
+                                : <img src='https://i.postimg.cc/HkkLYx1T/Recurso-4.png' alt={original_name} className={s.image} />
                             }</div>
                             <div className={s.name_wrapper}>
                                 <p className={s.name}>{ original_name }</p>
