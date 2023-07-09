@@ -32,7 +32,7 @@ export default function AppBar() {
                 <nav className={s.navpage}>
                 <Dark/>
                     <a href="/">Home</a>
-                    <a href="/movies">Movie</a>
+                    <a href="/goit-react-hw-05-movies/movies">Movie</a>
                 </nav>
             </div>
         </Container>

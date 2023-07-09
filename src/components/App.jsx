@@ -30,7 +30,7 @@ function App() {
         </Route>
 
         <Route
-         path='/goit-react-hw-05-movies/movies'
+         path='/movies'
          element={
           <Container>
 
@@ -40,10 +40,10 @@ function App() {
             }>
         </Route>
         
-        <Route path='/goit-react-hw-05-movies/movies/:movieId' element={<Container><MovieDetails></MovieDetails></Container>}>        
-            <Route path='/goit-react-hw-05-movies/movies/:movieId/cast' element={<Container><Cast></Cast></Container>}></Route>
-            <Route path='/goit-react-hw-05-movies/movies/:movieId/reviews' element={<Container><Reviews></Reviews></Container>}></Route>
-            <Route path='/goit-react-hw-05-movies/movies/:movieId/videos' element={<Container><Trailer></Trailer></Container>}></Route>
+        <Route path='/movies/:movieId' element={<Container><MovieDetails></MovieDetails></Container>}>        
+            <Route path='/movies/:movieId/cast' element={<Container><Cast></Cast></Container>}></Route>
+            <Route path='/movies/:movieId/reviews' element={<Container><Reviews></Reviews></Container>}></Route>
+            <Route path='/movies/:movieId/videos' element={<Container><Trailer></Trailer></Container>}></Route>
         </Route>
 
 
