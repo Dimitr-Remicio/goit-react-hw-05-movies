@@ -5,8 +5,10 @@
   --card-color: #f7f7f7;
   --card2-color: #f0efef;
   --border-color: #010e0f;
-
-
+  
+  
+  --heartfill:#00000000;
+  --heartstroke:#000000;
 
 
   --button-color2: #FFD0D0;
@@ -46,6 +48,9 @@
   --card2-color: #273141;
 
   --border-color: #0d5055;
+  --heartfill:#00000000;
+  --heartstroke:#ffffff;
+  --accent-color:#ff4c4c;
 
 
   --button-color: #61dbf1;

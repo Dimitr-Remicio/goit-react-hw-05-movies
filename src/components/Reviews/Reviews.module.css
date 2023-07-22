@@ -97,16 +97,24 @@
     width: 20px;
 }
 .iconmessage{
-    fill: #050505;   
+    fill: var(--heartstroke);   
 }
 .iconheart{
-    fill: #ffffff00;   
-    stroke: black;   
+    fill: var(--heartfill);   
+    stroke: var(--heartstroke);   
     stroke-width: 2.5px;
 
     transition: all 250ms;
 }
+.iconshare{
+    fill: var(--heartstroke);   
+}
 .iconheart:hover{
+    transition: all ease 200ms;
+    stroke: var(--accent-color);   
+    fill: var(--accent-color);
+}
+.iconheart:focus{
     transition: all ease 200ms;
     stroke: var(--accent-color);   
     fill: var(--accent-color);
@@ -139,7 +147,7 @@
     }
 
     .interactive{
-        margin-top: 50px;
+        margin-top: 20px;
     }
     .opinionUSer{
         display: flex;
@@ -148,4 +156,81 @@
          width: auto;
          max-width: 100%;
          font-size: 12px;
-        }    }
+        }    
+    
+
+        .read_more_less__more{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+        .read_more_less__less{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+    }
+
+@media screen and (max-width: 300px) {
+
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .reviews{
+        width: 90vw;
+        padding: 0;
+        transform: translate(-5%);
+    }
+
+    .reviews__item{
+        background-color: var(--card2-color);
+        padding: 20px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        gap: 20px;
+    
+        border-radius: 30px;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+    }
+    .container{
+        padding: 0;
+    }
+    .avatar{
+        width: 30px;
+        height: 30px;
+    }
+
+    .interactive{
+        margin-top: 20px;
+    }
+    .opinionUSer{
+        height: auto;
+        min-height: 150px;
+        display: flex;
+        flex-direction: row-reverse;
+         align-items: end;
+         width: auto;
+         max-width: 100%;
+         font-size: 12px;
+    } 
+        .read_more_less__more{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+        .read_more_less__less{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+    }

@@ -7,7 +7,7 @@ import Headers from './additional/head/head.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/goit-react-hw-05-movies">
+    <BrowserRouter basename="/filmoteka2.0">
       <App />
     </BrowserRouter>
       <Headers/>
